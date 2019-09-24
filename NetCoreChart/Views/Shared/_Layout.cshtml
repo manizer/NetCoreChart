@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    @* GLOBAL JS VARIABLES *@
+    <script type="text/javascript">
+        const BASE_URL = '@Context.Request.Scheme://@Context.Request.Host'
+    </script>
+</head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>

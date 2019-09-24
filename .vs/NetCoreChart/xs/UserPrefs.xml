@@ -1,0 +1,33 @@
+<Properties StartupConfiguration="{D3EB55F7-70F0-4A67-9368-E40FC6257FD4}|Default">
+  <MonoDevelop.Ide.ItemProperties.NetCoreChart PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NetCoreChart/Views/GoogleChart/ColumnChart.cshtml">
+    <Files>
+      <File FileName="NetCoreChart/Controllers/GoogleChartController.cs" Line="32" Column="1" />
+      <File FileName="NetCoreChart/Views/GoogleChart/ColumnChart.cshtml" Line="33" Column="60" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NetCoreChart" expanded="True">
+            <Node name="NetCoreChart" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="GoogleChart" expanded="True">
+                  <Node name="ColumnChart.cshtml" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
