@@ -1,0 +1,56 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Google Pie Chart";
+}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="chart-div"></div>
+<script type="text/javascript">google.charts.load('current', {
+        packages: ['corechart', 'bar']
+    });
+    google.charts.setOnLoadCallback(LoadData);
+
+    function LoadData() {
+        $.ajax({
+            url: `${BASE_URL}/GoogleChart/PopulationData`,
+            dataType: "json",
+            type: "GET",
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                toastr.error(err.message);
+            },
+            success: function (data) {
+                PopulationChart(data);
+                return false;
+            }
+        });
+        return false;
+    }
+
+    function PopulationChart(data) {
+        var dataArray = [
+            ['City', '2020 Population', '2010 Population', '2000 Population']
+        ];
+        $.each(data, function (i, item) {
+            dataArray.push([item.cityName, item.populationYear2020, item.populationYear2010, item.populationYear2000]);
+        });
+        var data = google.visualization.arrayToDataTable(dataArray);
+        var options = {
+            title: 'Population of Largest Cities of Odisha ',
+            chartArea: {
+                width: '50%'
+            },
+            colors: ['#2ecc71', '#7b1fa2', '#e74c3c', '#f1c40f', '#bdc3c7'], // Number of cities
+            hAxis: {
+                title: 'City',
+                minValue: 0
+            },
+            vAxis: {
+                title: 'Total Population'
+            }
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('chart-div'));
+
+        chart.draw(data, options);
+        return false;
+    }</script>  

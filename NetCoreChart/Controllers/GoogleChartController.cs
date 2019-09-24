@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Win32;
 
 // Tutorial: https://www.c-sharpcorner.com/article/creating-charts-with-asp-net-core-mvc-using-google-chart-api-part-two/
 
@@ -31,6 +32,7 @@ namespace NetCoreChart.Controllers
         }
 
         public ActionResult ColumnChart() => View();
+		public ActionResult PieChart() => View();
 
         [HttpGet]
         public JsonResult PopulationData()
